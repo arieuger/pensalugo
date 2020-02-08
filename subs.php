@@ -2,7 +2,7 @@
 $webmaster_email = "pensalugo@riseup.net";
 
 $feedback_page = "index.html";
-$error_page = "index.html";
+$error_page = "info.php";
 $thankyou_page = "index.html";
 
 $email_address = $_REQUEST['email_address'] ;
