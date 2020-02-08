@@ -34,12 +34,14 @@ function isInjected($str) {
 
 // If the user tries to access this script directly, redirect them to the feedback form,
 if (!isset($_REQUEST['email_address'])) {
-header( "Location: $feedback_page" );
+	echo "<script type='text/javascript'>alert('Acceso directo');</script>";
+	header( "Location: $feedback_page" );
 }
 
 // If the form fields are empty, redirect to the error page.
 elseif (/* empty($first_name) || */empty($email_address)) {
-header( "Location: $error_page" );
+	echo "<script type='text/javascript'>alert('Campos baleiros');</script>";
+	header( "Location: $error_page" );
 }
 
 /* 
@@ -47,14 +49,16 @@ If email injection is detected, redirect to the error page.
 If you add a form field, you should add it here.
 */
 elseif ( isInjected($email_address) /* || isInjected($first_name) */ || isInjected($comments) ) {
-header( "Location: $error_page" );
+	echo "<script type='text/javascript'>alert('isInjeced');</script>";
+	header( "Location: $error_page" );
 }
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
-	$ret_val = mail( "$webmaster_email", "Feedback Form Results", $msg );
+	mail( "$webmaster_email", "Feedback Form Results", $msg );
+	echo "<script type='text/javascript'>alert('Enviouse');</script>";
 
-	header( "Location: $thankyou_page" . "&" . "$ret_val" );
+	header( "Location: $thankyou_page" );
 }
 ?>
