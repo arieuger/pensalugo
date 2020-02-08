@@ -56,7 +56,7 @@ elseif ( isInjected($email_address) /* || isInjected($first_name) */ || isInject
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
-	mail( "$webmaster_email", "Feedback Form Results", $msg );
+	mail( "antiaroig@gmail.com", "Feedback Form Results", $msg );
 	echo "<script type='text/javascript'>alert('Enviouse');</script>";
 
 	//header( "Location: $thankyou_page" );
