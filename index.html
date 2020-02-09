@@ -61,7 +61,7 @@
                     <li><a class="smoothscroll"  href="#o-proxecto" title="o-proxecto">O noso proxecto</a></li>
                     <!-- <li><a class="smoothscroll"  href="#un-exemplo" title="un-exemplo">Un exemplo</a></li> -->
                     <li><a class="smoothscroll"  href="#saber_mais" title="saber_mais">Saber máis</a></li>
-                    <li><a class="smoothscroll"  href="#suscribete" title="suscribete">Suscribete</a></li>
+                    <!-- <li><a class="smoothscroll"  href="#suscribete" title="suscribete">Suscribete</a></li> -->
                 </ul>
 
                 <p>Escríbenos a pensalugo@riseup.net</p>
@@ -266,34 +266,58 @@
         </div> <!-- end section-header -->
     </section> <!-- end s-clients -->
 
-    <section id="suscribete" class="s-services" data-subscribed="false">
+<!--    <section id="suscribete" class="s-services" data-subscribed="false">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Suscríbete</h3>
                 <div id="notsubscribed">
+                    <div class="subLoader" id="subLoader" style="display:none;"></div> 
                     <h1 class="display-2">Cubre este formulario para comezar a recibir o xornal na casa</h1>
                     
                     <div id="subscribeForm">
-                        <!--  method="post" action="subs.php" -->
-                        <div>
-                            <label for="email_address">Your email</label>
-                            <input class="full-width" type="email" name="email_address" placeholder="test@mailbox.com" id="email_address">
+                        <div class="row">
+                            <div class="col-1-2 form-field">
+                                <label for="nome">Nome e apelidos</label>
+                                <input class="full-width" type="text" name="nome" id="nome" placeholder="Escribe o teu nome completo">
+                            </div>
+                            <div class="col-1-2 form-field">
+                                <label for="email_address">Correo electrónico</label>
+                                <input class="full-width" type="email" name="email_address" placeholder="correo@electronico.com" id="email_address">
+                            </div>
                         </div>
-                        <label for="comments">Message</label>
-                        <textarea class="full-width" placeholder="Your message" name="comments" id="comments"></textarea>
+                        <div class="row">
+                            <div class="col-1-2 form-field">
+                                <label for="docidentidade">Documento de identidade</label>
+                                <input class="full-width" type="text" name="docidentidade" id="docidentidade" placeholder="00000000T">
+                            </div>
+                            <div class="col-1-2 form-field">
+                                <label for="numconta">Número de conta</label>
+                                <input class="full-width" type="text" name="numconta" id="numconta">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-full form-field">
+                                <label for="enderezo">Enderezo</label>
+                                <input class="full-width" type="text" name="enderezo" id="enderezo">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="comments">Comentarios adiccionais</label>
+                            <textarea class="full-width" placeholder="Queres decirnos algo que non recolla o formulario?" name="comments" id="comments"></textarea>
+                        </div>
                     
                         <button class="btn--primary" id="subscribeFormBtn">Susbcríbete</button>
 
                     </div>
                 </div>
                 <div id="subscribed">
-                    Grazas! Enviarémosche un correo cando xestionemos a túa suscrición.
+                    Grazas! Enviarémosche un correo cando teñamos preparada a túa suscrición.
                 </div>
             </div>
-        </div> <!-- end section-header -->
+        </div> 
 
-    </section> <!-- end s-clients -->
+    </section> -->
 
     <!-- footer
     ================================================== -->
