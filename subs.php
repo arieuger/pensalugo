@@ -59,7 +59,7 @@ elseif ( isInjected($email_address) /* || isInjected($first_name) */ || isInject
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
-	mail( "$webmaster_email", "Feedback Form Results", $msg );
+	mail( "$webmaster_email", "Nova suscrición", $msg );
 
 	header('Content-type: application/json');
 	$response_array['status'] = 'okk'; 
