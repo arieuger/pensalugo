@@ -29,8 +29,7 @@
                 comments: $("#comments").val() 
             },
             success: function(result) {
-                response = JSON.parse(result);
-                if(response['success']) {
+                if(result['status'] === 'okk') {
                     alert('ok');    
                 } else {
                     alert('error');
