@@ -36,12 +36,16 @@ function isInjected($str) {
 if (!isset($_REQUEST['email_address'])) {
 	echo "<script type='text/javascript'>alert('Acceso directo');</script>";
 	//header( "Location: $feedback_page" );
+	header('Content-type: application/json');
+	$response_array['status'] = 'error'; 
+    exit(json_encode($response_array));
 }
 
 // If the form fields are empty, redirect to the error page.
 elseif (/* empty($first_name) || */empty($email_address)) {
 	echo "<script type='text/javascript'>alert('Campos baleiros');</script>";
-	//header( "Location: $error_page" );
+	$response_array['status'] = 'error'; 
+    exit(json_encode($response_array));
 }
 
 /* 
@@ -50,15 +54,15 @@ If you add a form field, you should add it here.
 */
 elseif ( isInjected($email_address) /* || isInjected($first_name) */ || isInjected($comments) ) {
 	echo "<script type='text/javascript'>alert('isInjeced');</script>";
-	//header( "Location: $error_page" );
+	$response_array['status'] = 'error'; 
+    exit(json_encode($response_array));
 }
 
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 
 	mail( "$webmaster_email", "Feedback Form Results", $msg );
-	echo "<script type='text/javascript'>alert('Enviouse');</script>";
-
-	//header( "Location: $thankyou_page" );
+	$response_array['status'] = 'error'; 
+    exit(json_encode($response_array));
 }
 ?>

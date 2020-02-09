@@ -19,6 +19,30 @@
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
+    $("#subscribeFormBtn").click(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "/subs.php",
+            data: { 
+                email_address: $("#email_address").val(),
+                comments: $("#comments").val() 
+            },
+            success: function(result) {
+                response = JSON.parse(result);
+                if(response['success']) {
+                    alert('ok');    
+                } else {
+                    alert('error');
+                }
+                
+            },
+            error: function(result) {
+                alert('error');
+            }
+        });
+    });
+
 
    /* Preloader
     * -------------------------------------------------- */
@@ -434,7 +458,6 @@
         clAlertBoxes();
         clContactForm();
         clAOS();
-        clAjaxChimp();
         clBackToTop();
 
     })();

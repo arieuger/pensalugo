@@ -61,7 +61,7 @@
                     <li><a class="smoothscroll"  href="#o-proxecto" title="o-proxecto">O noso proxecto</a></li>
                     <!-- <li><a class="smoothscroll"  href="#un-exemplo" title="un-exemplo">Un exemplo</a></li> -->
                     <li><a class="smoothscroll"  href="#saber_mais" title="saber_mais">Saber máis</a></li>
-                    <li><a class="smoothscroll"  href="#suscribete" title="suscribete">Suscribete</a></li>
+                    <!--<li><a class="smoothscroll"  href="#suscribete" title="suscribete">Suscribete</a></li>-->
                 </ul>
 
                 <p>Escríbenos a pensalugo@riseup.net</p>
@@ -265,30 +265,35 @@
             </div>
         </div> <!-- end section-header -->
     </section> <!-- end s-clients -->
-
-    <section id="suscribete" class="s-services">
+<!--
+    <section id="suscribete" class="s-services" data-subscribed="false">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Suscríbete</h3>
-                <h1 class="display-2">Cubre este formulario para comezar a recibir o xornal na casa</h1>
-                
-                <form method="post" action="subs.php">
-                    <div>
-                        <label for="email_address">Your email</label>
-                        <input class="full-width" type="email" name="email_address" placeholder="test@mailbox.com" id="email_address">
+                <div id="notsubscribed">
+                    <h1 class="display-2">Cubre este formulario para comezar a recibir o xornal na casa</h1>
+                    
+                    <div id="subscribeForm">-->
+                        <!--  method="post" action="subs.php" -->
+       <!--                 <div>
+                            <label for="email_address">Your email</label>
+                            <input class="full-width" type="email" name="email_address" placeholder="test@mailbox.com" id="email_address">
+                        </div>
+                        <label for="comments">Message</label>
+                        <textarea class="full-width" placeholder="Your message" name="comments" id="comments"></textarea>
+                    
+                        <button class="btn--primary" id="subscribeFormBtn">Susbcríbete</button>
+
                     </div>
-                    <label for="comments">Message</label>
-                    <textarea class="full-width" placeholder="Your message" name="comments" id="comments"></textarea>
-                
-                    <input class="btn--primary" type="submit" value="Submit">
-
-                </form>
-
+                </div>
+                <div id="subscribed">
+                    Grazas! Enviarémosche un correo cando xestionemos a túa suscrición.
+                </div>
             </div>
-        </div> <!-- end section-header -->
-
-    </section> <!-- end s-clients -->
+        </div> 
+-->
+    </section> <!-- end s-clients --> 
 
     <!-- footer
     ================================================== -->
