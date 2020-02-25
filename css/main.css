@@ -194,6 +194,10 @@ span.lead {
     color: #000000;
 }
 
+.lead > a {
+    line-height: 1.2;
+}
+
 p.lead {
     font-family: "montserrat-regular", sans-serif;
     font-size: 2rem;
