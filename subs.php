@@ -1,13 +1,18 @@
 <?php
 $webmaster_email = "pensalugo@riseup.net";
 
-$email_address = $_REQUEST['email_address'] ;
-$comments = $_REQUEST['comments'] ;
-/*$first_name = $_REQUEST['first_name'] ;
-"First Name: " . $first_name . "\r\n" . */
+$email_address   = $_REQUEST['email_address'];
+$nome 			 = $_REQUEST['nome'];
+$docidentidade   = $_REQUEST['docidentidade'];
+$numconta		 = $_REQUEST['numconta'];
+$enderezo		 = $_REQUEST['enderezo'];
+
 $msg = 
-"Email: " . $email_address . "\r\n" . 
-"Comments: " . $comments ;
+"<strong>Email:</strong> " . $email_address . "\r\n" . 
+"<strong>Nome:</strong> " . $nome . "\r\n" . 
+"<strong>Documento de identidade:</strong> " . $docidentidade . "\r\n" . 
+"<strong>Nº de conta:</strong> " . $numconta . "\r\n" . 
+"<strong>Enderezo:</strong> " . $enderezo ;
 
 function isInjected($str) {
 	$injections = array('(\n+)',

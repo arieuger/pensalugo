@@ -26,8 +26,11 @@
             type: "POST",
             url: "/subs.php",
             data: { 
-                email_address: $("#email_address").val(),
-                comments: $("#comments").val() 
+                email_address  : $("#email_address").val(),
+                nome           : $("$nome").val(),
+                docidentidade  : $("$docidentidade").val(),
+                numconta       : $("$numconta").val(),
+                enderezo       : $("$enderezo").val()
             },
             success: function(result) {
 
