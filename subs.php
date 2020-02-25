@@ -8,11 +8,11 @@ $numconta		 = $_REQUEST['numconta'];
 $enderezo		 = $_REQUEST['enderezo'];
 
 $msg = 
-"<p>Email:</p> " . $email_address . "\r\n" . 
-"<p>Nome:</p> " . $nome . "\r\n" . 
-"<p>Documento de identidade:</p> " . $docidentidade . "\r\n" . 
-"<p>Nº de conta:</p> " . $numconta . "\r\n" . 
-"<p>Enderezo:</p> " . $enderezo ;
+"<b>Email:</b> " . $email_address . "\r\n" . 
+"<b>Nome:</b> " . $nome . "\r\n" . 
+"<b>Documento de identidade:</b> " . $docidentidade . "\r\n" . 
+"<b>Nº de conta:</b> " . $numconta . "\r\n" . 
+"<b>Enderezo:</b> " . $enderezo ;
 
 function isInjected($str) {
 	$injections = array('(\n+)',
