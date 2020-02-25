@@ -53,6 +53,7 @@
             },
             error: function(result) {
                 alert('error');
+                console.log(result);
             }
         });
     });
