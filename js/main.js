@@ -35,13 +35,6 @@
             },
             success: function(result) {
 
-                  var start = new Date().getTime();
-                  for (var i = 0; i < 1e7; i++) {
-                    if ((new Date().getTime() - start) > 2000){
-                      break;
-                    }
-                  }
-
                 if(result['status'] === 'ok') {
                     $('.subLoader').css('display','none');
                     $('#subscribed').removeClass('is-hidden');
