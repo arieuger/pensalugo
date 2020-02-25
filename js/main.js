@@ -20,6 +20,7 @@
     doc.setAttribute('data-useragent', navigator.userAgent);
 
     $("#subscribeFormBtn").click(function(e) {
+        $('.subLoader').css('display','block');
         e.preventDefault();
         $.ajax({
             type: "POST",
@@ -29,10 +30,19 @@
                 comments: $("#comments").val() 
             },
             success: function(result) {
-                response = JSON.parse(result);
-                if(response['success']) {
+
+                  var start = new Date().getTime();
+                  for (var i = 0; i < 1e7; i++) {
+                    if ((new Date().getTime() - start) > 2000){
+                      break;
+                    }
+                  }
+
+                if(result['status'] === 'okk') {
+                    $('.subLoader').css('display','none');
                     alert('ok');    
                 } else {
+                    $('.subLoader').css('display','none');
                     alert('error');
                 }
                 
