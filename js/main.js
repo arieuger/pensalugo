@@ -30,7 +30,8 @@
                 nome           : $("#nome").val(),
                 docidentidade  : $("#docidentidade").val(),
                 numconta       : $("#numconta").val(),
-                enderezo       : $("#enderezo").val()
+                enderezo       : $("#enderezo").val(),
+                acceptprivacy  : $("#acceptprivacy").prop('checked')
             },
             success: function(result) {
 
@@ -43,7 +44,7 @@
 
                 if(result['status'] === 'okk') {
                     $('.subLoader').css('display','none');
-                    alert('ok');    
+                    $('#subscribed').removeClass('is-hidden');
                 } else {
                     $('.subLoader').css('display','none');
                     alert('error');

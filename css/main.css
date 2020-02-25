@@ -185,6 +185,15 @@ p img {
     margin: 0;
 }
 
+span.lead {
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 3.6rem;
+    color: #000000;
+}
+
 p.lead {
     font-family: "montserrat-regular", sans-serif;
     font-size: 2rem;

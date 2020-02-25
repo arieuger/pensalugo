@@ -269,6 +269,13 @@
                     <div class="subLoader" id="subLoader" style="display:none;"></div> 
                     <h1 class="display-2">Cubre este formulario para comezar a recibir o xornal na casa</h1>
                     
+                    <div class="row">
+                        <div id="subscribed" class="alert-box alert-box--success is-hidden">
+                            <p>Grazas! Enviarémosche un correo cando teñamos preparada a túa suscrición.</p>
+                            <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
                     <div id="subscribeForm">
                         <div class="row">
                             <div class="col-1-2 form-field">
@@ -296,12 +303,15 @@
                                 <input class="full-width" type="text" name="enderezo" id="enderezo">
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-full form-field">
+                                <input name="acceptprivacy" id="acceptprivacy" type="checkbox">
+                                <span class="lead">Le a nosa <a href="pdf/privacidadepensalugo.pdf" download>política de privacidade</a> e, se estás de acordo, acepta as súas condicións para subscribirte</span>
+                            </div>
+                        </div>
                         <button class="btn--primary" id="subscribeFormBtn">Susbcríbete</button>
 
                     </div>
-                </div>
-                <div id="subscribed">
-                    Grazas! Enviarémosche un correo cando teñamos preparada a túa suscrición.
                 </div>
             </div>
         </div> 

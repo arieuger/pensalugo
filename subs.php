@@ -6,13 +6,15 @@ $nome 			 = $_REQUEST['nome'];
 $docidentidade   = $_REQUEST['docidentidade'];
 $numconta		 = $_REQUEST['numconta'];
 $enderezo		 = $_REQUEST['enderezo'];
+$acceptprivacy   = $_REQUEST['acceptprivacy'];
 
 $msg = 
-"<b>Email:</b> " . $email_address . "\r\n" . 
-"<b>Nome:</b> " . $nome . "\r\n" . 
-"<b>Documento de identidade:</b> " . $docidentidade . "\r\n" . 
-"<b>Nº de conta:</b> " . $numconta . "\r\n" . 
-"<b>Enderezo:</b> " . $enderezo ;
+"Email: " . $email_address . "\r\n" . 
+"Nome: " . $nome . "\r\n" . 
+"Documento de identidade: " . $docidentidade . "\r\n" . 
+"Nº de conta: " . $numconta . "\r\n" . 
+"Enderezo: " . $enderezo "\r\n" .
+"Acepta política de privacidade? " . $acceptprivacy == true ? "Si" : "Non";
 
 function isInjected($str) {
 	$injections = array('(\n+)',
