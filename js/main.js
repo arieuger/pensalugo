@@ -48,7 +48,7 @@
 
                 $('html, body').animate({
                     scrollTop: $("#suscribete").offset().top
-                }, 300);
+                }, 800);
                 
             },
             error: function(jqXHR, textStatus, errorThrown) {
