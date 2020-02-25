@@ -14,7 +14,7 @@ $msg =
 "Documento de identidade: " . $docidentidade . "\r\n" . 
 "Nº de conta: " . $numconta . "\r\n" . 
 "Enderezo: " . $enderezo . "\r\n" .
-"Acepta política de privacidade? " . $acceptprivacy == true ? "Si" : "Non";
+"Acepta política de privacidade? " . $acceptprivacy;
 
 function isInjected($str) {
 	$injections = array('(\n+)',
