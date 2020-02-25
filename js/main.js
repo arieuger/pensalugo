@@ -27,10 +27,10 @@
             url: "/subs.php",
             data: { 
                 email_address  : $("#email_address").val(),
-                nome           : $("$nome").val(),
-                docidentidade  : $("$docidentidade").val(),
-                numconta       : $("$numconta").val(),
-                enderezo       : $("$enderezo").val()
+                nome           : $("#nome").val(),
+                docidentidade  : $("#docidentidade").val(),
+                numconta       : $("#numconta").val(),
+                enderezo       : $("#enderezo").val()
             },
             success: function(result) {
 
