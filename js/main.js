@@ -45,6 +45,10 @@
                     $('#formerrordiv').removeClass('is-hidden');
                     $('#subscribed').addClass('is-hidden');
                 }
+
+                $('html, body').animate({
+                    scrollTop: $("#suscribete").offset().top
+                }, 300);
                 
             },
             error: function(jqXHR, textStatus, errorThrown) {
