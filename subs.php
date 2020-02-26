@@ -7,6 +7,7 @@ $docidentidade   = $_REQUEST['docidentidade'];
 $numconta		 = $_REQUEST['numconta'];
 $titconta		 = $_REQUEST['titconta'];
 $enderezo		 = $_REQUEST['enderezo'];
+$codpostal		 = $_REQUEST['codpostal'];
 $acceptprivacy   = $_REQUEST['acceptprivacy'];
 
 $msg = 
@@ -16,6 +17,7 @@ $msg =
 "Nº de conta: " . $numconta . "\r\n" . 
 "Nome da persoa titular: " . $titconta . "\r\n" .
 "Enderezo: " . $enderezo . "\r\n" .
+"Código postal: " . $codpostal . "\r\n" .
 "Acepta política de privacidade? " . $acceptprivacy;
 
 function isInjected($str) {
@@ -50,7 +52,8 @@ if (!isset($_REQUEST['email_address'])) {
 		|| isInjected($docidentidade) 
 		|| isInjected($numconta) 
 		|| isInjected($titconta) 
-		|| isInjected($enderezo) ) {
+		|| isInjected($enderezo)
+		|| isInjected($codpostal) ) {
 	header('Content-type: application/json');
 	$response_array['status'] = 'error: injected'; 
 	$response_array['mensaxe'] = 'Non podes intentar unha inxección SQL';
@@ -62,7 +65,8 @@ if (!isset($_REQUEST['email_address'])) {
 	   || empty($docidentidade) 
 	   || empty($numconta)
 	   || empty($titconta)
-	   || empty($enderezo)) {
+	   || empty($enderezo)
+	   || empty($codpostal)) {
 	header('Content-type: application/json');
 	$response_array['status'] = 'error: empty';
 	$response_array['mensaxe'] = 'Debes cubrir todos os campos do formulario';

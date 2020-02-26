@@ -32,6 +32,7 @@
                 numconta       : $("#numconta").val(),
                 titconta       : $('#titconta').val(),
                 enderezo       : $("#enderezo").val(),
+                codpostal      : $("#codpostal").val(),
                 acceptprivacy  : $("#acceptprivacy").prop('checked')
             },
             success: function(result) {
