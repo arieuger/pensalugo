@@ -30,6 +30,7 @@
                 nome           : $("#nome").val(),
                 docidentidade  : $("#docidentidade").val(),
                 numconta       : $("#numconta").val(),
+                titconta       : $('#titconta').val(),
                 enderezo       : $("#enderezo").val(),
                 acceptprivacy  : $("#acceptprivacy").prop('checked')
             },
@@ -47,7 +48,7 @@
                 }
 
                 $('html, body').animate({
-                    scrollTop: $("#suscribete").offset().top
+                    scrollTop: $("#notsubscribed").offset().top
                 }, 800);
                 
             },

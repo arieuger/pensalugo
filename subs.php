@@ -5,6 +5,7 @@ $email_address   = $_REQUEST['email_address'];
 $nome 			 = $_REQUEST['nome'];
 $docidentidade   = $_REQUEST['docidentidade'];
 $numconta		 = $_REQUEST['numconta'];
+$titconta		 = $_REQUEST['titconta'];
 $enderezo		 = $_REQUEST['enderezo'];
 $acceptprivacy   = $_REQUEST['acceptprivacy'];
 
@@ -13,6 +14,7 @@ $msg =
 "Nome: " . $nome . "\r\n" . 
 "Documento de identidade: " . $docidentidade . "\r\n" . 
 "Nº de conta: " . $numconta . "\r\n" . 
+"Nome da persoa titular: " . $titconta . "\r\n" .
 "Enderezo: " . $enderezo . "\r\n" .
 "Acepta política de privacidade? " . $acceptprivacy;
 
@@ -43,14 +45,24 @@ if (!isset($_REQUEST['email_address'])) {
 	$response_array['mensaxe'] = 'Debes cubrir o formulario na páxina inicial';
     exit(json_encode($response_array));
 
-} elseif ( isInjected($email_address) || isInjected($nome) || isInjected($docidentidade) || isInjected($numconta) || isInjected($enderezo) ) {
+} elseif ( isInjected($email_address) 
+		|| isInjected($nome) 
+		|| isInjected($docidentidade) 
+		|| isInjected($numconta) 
+		|| isInjected($titconta) 
+		|| isInjected($enderezo) ) {
 	header('Content-type: application/json');
 	$response_array['status'] = 'error: injected'; 
 	$response_array['mensaxe'] = 'Non podes intentar unha inxección SQL';
     exit(json_encode($response_array));
     return false;
 
-} elseif (empty($email_address) || empty($nome) || empty($docidentidade) || empty($numconta) || empty($enderezo)) {
+} elseif (empty($email_address) 
+	   || empty($nome) 
+	   || empty($docidentidade) 
+	   || empty($numconta)
+	   || empty($titconta)
+	   || empty($enderezo)) {
 	header('Content-type: application/json');
 	$response_array['status'] = 'error: empty';
 	$response_array['mensaxe'] = 'Debes cubrir todos os campos do formulario';
